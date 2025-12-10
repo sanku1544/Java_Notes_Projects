@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename package &apos;Oct28&apos; to &apos;com.tka.Oct28&apos;&#x0D;&#x0A;- Original project: &apos;Casting&apos;&#x0D;&#x0A;- Original element: &apos;Casting/src/Oct28&apos;&#x0D;&#x0A;- Renamed element: &apos;Casting/src/com.tka.Oct28&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;Oct28&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;Oct28" name="com.tka.Oct28" qualified="false" references="true" stamp="1762963172857" textual="false" version="1.0"/>
-</session>

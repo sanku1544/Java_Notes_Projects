@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+D:\Java by Kiran\Worlplaces\.metadata\.plugins\org.eclipse.jdt.core
-589662042.index
-3860178000.index
-1865797976.index

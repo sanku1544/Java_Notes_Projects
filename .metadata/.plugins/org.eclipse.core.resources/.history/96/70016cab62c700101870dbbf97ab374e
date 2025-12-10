@@ -1,9 +1,0 @@
-package com.tka.Nov22;
-import java.util.*;
-import java.io.*;
-public class A {
-  Scanner sc=new Scanner(System.in);
-  System.out.println("10 ratings: ")
-  int rate=sc.nextInt();
-  
-}

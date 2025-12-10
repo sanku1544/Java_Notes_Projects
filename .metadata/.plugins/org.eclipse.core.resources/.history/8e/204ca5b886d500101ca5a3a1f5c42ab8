@@ -1,7 +1,0 @@
-package com.tka.Dec8;
-
-public class CSK {
- void CSK() {
-	 Player p[]=new Player[11];
- }
-}

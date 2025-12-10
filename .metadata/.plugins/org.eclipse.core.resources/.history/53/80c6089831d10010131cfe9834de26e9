@@ -1,8 +1,0 @@
-package com.tka.Dec04;
-
-public interface Vehicle {
-	int a=10;
-   void start();
-  public  void stop();
-   
-}

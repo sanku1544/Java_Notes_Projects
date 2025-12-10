@@ -1,6 +1,0 @@
-package com.tka.Dec8;
-
-public class MumbaiIndians {
-  int mi[]=new Player[11];
-  Player mi[1]= {45,"Rohit Sharma",4512};
-}
