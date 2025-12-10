@@ -1,0 +1,16 @@
+package com.tka.Dec7;
+
+public class CardPayment extends OnlinePayment {
+
+	public CardPayment(String transactionId) {
+		super(transactionId);
+		
+	}
+
+	@Override
+	public void pay() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

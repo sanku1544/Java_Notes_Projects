@@ -1,0 +1,19 @@
+package com.tka.Nov22;
+import java.util.*;
+public class Uptox {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("ENter profit code: ");
+		int n=582741;
+		int sum=0;
+		if(n%2==0) {
+			sum=sum+n;
+			}
+			
+		System.out.println(sum);
+		
+
+	}
+
+}

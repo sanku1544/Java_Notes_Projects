@@ -1,0 +1,19 @@
+package SecondSaturday;
+
+public class Test {
+	void ans() {
+		SecondSaturday s1=new SecondSaturday();
+		s1.nTo1(25);
+		s1.square();
+		s1.Charcters();
+		s1.Charcters1();
+		s1.digits0To9();
+		s1.factors(30);
+	}
+
+	public static void main(String[] args) {
+		SecondSaturday s1=new SecondSaturday();
+		s1.SumOfEven(1456);
+	}
+
+}

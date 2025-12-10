@@ -1,0 +1,27 @@
+package com.tka.Dec5;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Child c1=new Child();
+		c1.DogSound();
+		c1.CatSound();
+		c1.sound();
+		
+		Animal a1=new Child();
+		a1.DogSound();
+		a1.CatSound();
+		a1.sound();
+		
+		Dog d1= new Child();
+		d1.DogSound();
+//		d1.CatSound();
+//		d1.sound();
+		
+		Cat cat1= new Child();
+		d1.DogSound();
+//		d1.CatSound();
+//		d1.sound();
+	}
+
+}

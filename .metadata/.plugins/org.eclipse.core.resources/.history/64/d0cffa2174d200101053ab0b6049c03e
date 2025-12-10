@@ -1,0 +1,14 @@
+package com.tka.Billing;
+
+import java.util.Scanner;
+
+public class Billing {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		
+
+	}
+
+}

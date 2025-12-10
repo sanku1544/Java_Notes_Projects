@@ -1,0 +1,9 @@
+package SecondSaturday;
+
+public class SecondSaturday {
+  void nTo1(int n) {
+	  for(int i=n;i<=n;i--) {
+		  System.out.println(i);
+	  }
+  }
+}

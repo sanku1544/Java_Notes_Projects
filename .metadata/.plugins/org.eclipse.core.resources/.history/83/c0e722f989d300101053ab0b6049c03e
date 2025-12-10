@@ -1,0 +1,65 @@
+package com.tka.Billing;
+
+import java.util.Scanner;
+
+public class Billing {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter purchase Amt: ");
+		double totalPurchaseAmount= sc.nextDouble();
+		
+		System.out.println("Enter Customer type: \nN for Normal\n M for Member\n P for Premium : \n");
+		char type= sc.next().charAt(0);
+		
+		double finalBill;
+		double discount;
+		switch(type) {
+		case 'N':
+		break;
+		
+		case 'M':if(totalPurchaseAmount>=2000) {
+			discount=0.05;
+		double	discountAmt=totalPurchaseAmount*discount;
+			System.out.println(totalPurchaseAmount+" Dicount 20% amt: "+discountAmt);
+			finalBill=totalPurchaseAmount-discountAmt;
+		}else {
+			discount=0.02;
+			double	discountAmt=totalPurchaseAmount*discount;
+				System.out.println(totalPurchaseAmount+" Dicount 2% amt: "+discountAmt);
+				finalBill=totalPurchaseAmount-discountAmt;
+		}
+		break;
+		
+		case 'P':if(totalPurchaseAmount>=5000) {
+			discount=0.12;
+			double	discountAmt=totalPurchaseAmount*discount;
+				System.out.println(totalPurchaseAmount+" Dicount 12% amt: "+discountAmt);
+				finalBill=totalPurchaseAmount-discountAmt;
+		}else if(totalPurchaseAmount>=3000){
+			discount=0.08;
+			double	discountAmt=totalPurchaseAmount*discount;
+				System.out.println(totalPurchaseAmount+" Dicount 8% amt: "+discountAmt);
+				finalBill=totalPurchaseAmount-discountAmt;
+		}else {
+			discount=0.04;
+			double	discountAmt=totalPurchaseAmount*discount;
+				System.out.println(totalPurchaseAmount+" Dicount 20% amt: "+discountAmt);
+				finalBill=totalPurchaseAmount-discountAmt;
+		};
+		break;
+		
+		default:System.out.println("Enter proper details");
+		
+		System.out.println("Enter visit of this month: ");
+		int visitCount=sc.nextInt();
+		
+		System.out.println("Enter month code: ");
+		int monthCode=sc.nextInt();
+		
+		
+		}
+
+	}
+
+}

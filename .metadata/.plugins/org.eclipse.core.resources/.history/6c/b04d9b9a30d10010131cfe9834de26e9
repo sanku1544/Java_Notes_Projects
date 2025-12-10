@@ -1,0 +1,6 @@
+package com.tka.Dec04;
+
+public interface Bike {
+  public abstract void start();
+  
+}

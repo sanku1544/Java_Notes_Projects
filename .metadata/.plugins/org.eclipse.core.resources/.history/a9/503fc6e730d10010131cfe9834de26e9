@@ -1,0 +1,14 @@
+package com.tka.Dec04;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Vehicle v1= new Car();
+		v1.stop();
+		v1.m1();
+		v1.start();
+		Vehicle v1= new Bike();s
+		v1.start();
+	}
+
+}

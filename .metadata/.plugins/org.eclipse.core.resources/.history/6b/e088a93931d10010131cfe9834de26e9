@@ -1,0 +1,10 @@
+package com.tka.Dec04;
+
+public interface Bike extends Vehicle {
+  public abstract void start();
+  void stop();
+  public static void m1() {
+	  System.out.println(a);
+  }
+  
+}

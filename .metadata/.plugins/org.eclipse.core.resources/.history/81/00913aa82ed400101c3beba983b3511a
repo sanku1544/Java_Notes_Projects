@@ -1,0 +1,30 @@
+package com.tka.Dec8;
+
+public class Arrays {
+   void m1() { 
+	int []marks=new int[5];
+	
+	marks[0]=12;
+	marks[1]=72;
+	marks[3]=19;
+	marks[4]=23;
+	marks[2]=85;
+	
+	for(int i=0;i<marks.length;i++) {
+		if(marks[i]%2==0) {
+			System.out.println("Even marks: "+marks[i]);
+		}else {			System.out.println("-------------------------");
+			System.out.println("Odd marks: "+marks[i]);
+		}
+		
+		
+	}
+	System.out.println("---------------------------");
+	for(int i=0;i<marks.length;i++) {
+		if(marks[i]<60) {
+			System.out.println("Below 60 marks: "+marks[i]);
+		}
+	}
+	
+   }
+}

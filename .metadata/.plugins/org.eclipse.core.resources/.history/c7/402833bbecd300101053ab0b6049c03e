@@ -1,0 +1,5 @@
+package com.tka.Dec7;
+
+public interface Payment {
+
+}

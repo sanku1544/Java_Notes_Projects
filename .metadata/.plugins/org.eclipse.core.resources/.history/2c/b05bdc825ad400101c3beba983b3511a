@@ -1,0 +1,8 @@
+package com.tka.Dec8;
+
+public class MumbaiIndians {
+	void Team() {
+  Player mi[]=new Player[11];
+   mi[0]=new Player(45,"Rohit Sharma",4512);
+	}
+}
