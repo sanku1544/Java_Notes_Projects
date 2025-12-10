@@ -1,0 +1,5 @@
+package com.tka.Dec5;
+
+public interface Cat {
+  void CatSound();
+}

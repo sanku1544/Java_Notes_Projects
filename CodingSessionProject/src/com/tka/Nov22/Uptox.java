@@ -1,0 +1,26 @@
+package com.tka.Nov22;
+import java.util.*;
+public class Uptox {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter profit code: ");
+		int n=sc.nextInt();
+		int sum=0;
+		int res=0;
+		while(n>0) {
+			res=n%10;
+			if(res%2==0) {
+				sum=sum+res;
+				}
+			n=n/10;
+			
+		}
+		
+			
+		System.out.println("Even digit Sum is: "+sum);
+		
+
+	}
+
+}

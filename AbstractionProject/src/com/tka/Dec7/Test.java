@@ -1,0 +1,28 @@
+package com.tka.Dec7;
+
+public class Test {
+	static void  Payment() {
+		// interface  Payment 
+		//abstract class  onlinePayment
+		//concreate class UPI and CardPayment
+		UPI u1= new UPI("sanket@1546232");
+		u1.showTransactionId();
+		u1.pay();
+		
+		
+		System.out.println("-------------------------------------");
+		CardPayment c1=new CardPayment("481sfew5412fw");
+		c1.showTransactionId();
+		c1.pay();
+	}
+
+	public static void main(String[] args) {
+
+		
+		
+		
+		
+
+	}
+
+}

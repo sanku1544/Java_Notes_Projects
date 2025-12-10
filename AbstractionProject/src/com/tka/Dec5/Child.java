@@ -1,0 +1,26 @@
+package com.tka.Dec5;
+
+public  class Child extends Animal {
+
+	@Override
+	public void DogSound() {
+		System.out.println("Dog Sound");
+		
+	}
+
+	@Override
+	public void CatSound() {
+		System.out.println("Cat sound");
+		
+	}
+
+	@Override
+	void sound() {
+		System.out.println("Abstarct class");
+		
+	}
+	 void m1() {
+		 System.out.println(111);
+	 }
+
+}

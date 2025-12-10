@@ -1,0 +1,14 @@
+package com.tka.Dec8;
+
+public class Test {
+
+	public static void main(String[] args) {
+
+//		new MI().operations();
+//		new CSK().operations();
+//		new RCB().operations();
+//		new KKR().operations();
+		new RR().operations();
+	}
+
+}
