@@ -6,12 +6,13 @@ public class Player {
    private int runs;
    private static String tname;
    private int wickets;
-   public Player(int jn, String name, int runs,int wickets) {
+   public Player(int jn, String name, int runs,int wickets,String tname) {
 	super();
 	this.jn = jn;
 	this.name = name;
 	this.runs = runs;
 	this.wickets=wickets;
+	this.tname=tname;
 	
    }
    public int getJn() {

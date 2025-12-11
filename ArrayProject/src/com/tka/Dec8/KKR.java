@@ -2,20 +2,21 @@ package com.tka.Dec8;
 
 public class KKR {
 	Player kkr[] = new Player[11];
+	int count=0;
 		KKR(){
 			
 
-			kkr[0] = new Player(12, "Shreyas Iyer", 2987, 1);
-			kkr[1] = new Player(74, "Rinku Singh", 895, 4);
-			kkr[2] = new Player(36, "Nitish Rana", 2594, 3);
-			kkr[3] = new Player(7,  "Andre Russell", 2262, 93);
-			kkr[4] = new Player(24, "Sunil Narine", 1040, 165);
-			kkr[5] = new Player(21, "Venkatesh Iyer", 956, 8);
-			kkr[6] = new Player(47, "Rahmanullah Gurbaz", 387, 2);
-			kkr[7] = new Player(16, "Varun Chakravarthy", 68, 62);
-			kkr[8] = new Player(25, "Mitchell Starc", 120, 34);
-			kkr[9] = new Player(10, "Harshit Rana", 74, 17);
-			kkr[10] = new Player(44, "Manish Pandey", 3648, 1);
+			kkr[0] = new Player(12, "Shreyas Iyer", 2987, 1,"KKR");
+			kkr[1] = new Player(74, "Rinku Singh", 895, 4,"KKR");
+			kkr[2] = new Player(36, "Nitish Rana", 2594, 3,"KKR");
+			kkr[3] = new Player(7,  "Andre Russell", 2262, 93,"KKR");
+			kkr[4] = new Player(24, "Sunil Narine", 1040, 165,"KKR");
+			kkr[5] = new Player(21, "Venkatesh Iyer", 956, 8,"KKR");
+			kkr[6] = new Player(47, "Rahmanullah Gurbaz", 387, 2,"KKR");
+			kkr[7] = new Player(16, "Varun Chakravarthy", 68, 62,"KKR");
+			kkr[8] = new Player(25, "Mitchell Starc", 120, 34,"KKR");
+			kkr[9] = new Player(10, "Harshit Rana", 74, 17,"KKR");
+			kkr[10] = new Player(44, "Manish Pandey", 3648, 1,"KKR");
 			
 			
 		}
@@ -32,5 +33,11 @@ public class KKR {
 				}
 			}
 			System.out.println("Highest runner is: "+highestRunner.getName());
+			for(Player m:kkr) {
+				 if(m.getName().contains("r")) {
+					 count++;
+				 }
+			 }
+				System.out.println("Names that contains R: "+count);
 		}
 }
