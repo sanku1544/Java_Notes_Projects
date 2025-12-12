@@ -1,3 +1,4 @@
+package com.tka.Dec11;
 import java.util.Scanner;
 
 public class ExceptionH {
@@ -25,6 +26,7 @@ public class ExceptionH {
     		System.out.println("\n"+e.getMessage());
     	}
     	try{
+    		
     		System.out.println(s[6]);
     	}catch(ArrayIndexOutOfBoundsException e) {
     		e.printStackTrace();
@@ -43,7 +45,7 @@ public class ExceptionH {
 		}
 		catch(Exception e) {
 			
-			System.out.println(e);
+			System.out.println("\n"+e);
 			System.out.println("Message is: "+e.getMessage());
 		}
     }
