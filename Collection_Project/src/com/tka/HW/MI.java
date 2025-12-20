@@ -22,7 +22,7 @@ public class MI {
 
 	}
 
-	void getName() {
+	void Operations() {
 		int runs=0;
 		for(Player p:l1) {
 			if(p.getPname().contains("r") && p.getJn()>25) {

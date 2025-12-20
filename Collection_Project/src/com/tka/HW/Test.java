@@ -6,7 +6,7 @@ public class Test {
 
 	public static void main(String[] args) {
 				
-		new MI().getName();
+		new MI().Operations();
 		//new CSK().Operations();
 		//new RCB().Operations();
 		//new KKR().Operations();
