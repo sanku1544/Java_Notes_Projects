@@ -1,4 +1,4 @@
-package com.tka.players;
+package com.tka.Players;
 
 public class Players {
 	private int Jn;

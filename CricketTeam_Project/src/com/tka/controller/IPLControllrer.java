@@ -1,10 +1,9 @@
-package com.tka.main;
+package com.tka.controller;
 
 import java.util.List;
 
-import com.tka.players.Players;
-
-import cmo.tka.Services.IPLServices;
+import com.tka.Players.Players;
+import com.tka.Services.IPLServices;
 
 public class IPLControllrer {
 
@@ -14,7 +13,7 @@ public class IPLControllrer {
 		List<Players> player1 = ip.getPlayers("mi");
 		List<Players> player2 = ip.getPlyersByCountry("South Africa");
 		List<Players> player3 = ip.getPlyersByHighestRuns(4200);
-		List<Players> player4 = ip.getPlyersTotalRuns();
+		ip.getPlyersTotalRuns();
 		List<Players> player5 = ip.getPlyersStartWith("Vi");
 		System.out.println("\nMi team players: ");
 		for (Players p : player1) {

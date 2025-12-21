@@ -1,10 +1,10 @@
-package cmo.tka.Services;
+package com.tka.Services;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.rtka.database.Database;
-import com.tka.players.Players;
+import com.tka.Database.Database;
+import com.tka.Players.Players;
 
 public class IPLServices {
 

@@ -1,9 +1,9 @@
-package com.rtka.database;
+package com.tka.Database;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.tka.players.Players;
+import com.tka.Players.Players;
 
 public class Database {
 		public List<Players> getAllPlayers(){
