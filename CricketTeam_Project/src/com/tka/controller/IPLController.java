@@ -1,40 +1,46 @@
 package com.tka.controller;
 
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import com.tka.Players.Players;
 import com.tka.Services.IPLServices;
 
-public class IPLControllrer {
+public class IPLController {
 
-	public static void main(String[] args) {
-		IPLServices ip = new IPLServices();
+    public static void main(String[] args) {
 
-		List<Players> player1 = ip.getPlayers("mi");
-		List<Players> player2 = ip.getPlyersByCountry("South Africa");
-		List<Players> player3 = ip.getPlyersByHighestRuns(4200);
-		ip.getPlyersTotalRuns();
-		List<Players> player5 = ip.getPlyersStartWith("Vi");
-		System.out.println("\nMi team players: ");
-		for (Players p : player1) {
-			System.out.println(p.getName() + " : " + p.getCname());
-		}
+        IPLServices ip = new IPLServices();
 
-		System.out.println("\nSA players: ");
-		for (Players p1 : player2) {
-			System.out.println(p1.getName() + " :- " + p1.getCname());
-		}
+        
+        List<Players> miPlayers = ip.getPlayers("mi");
+        List<Players> countryPlayers = ip.getPlyersByCountry("South Africa");
+        List<Players> mostRuns = ip.getPlyersByHighestRuns(5000);
 
-		System.out.println("\nPlayer runs greater than 4200 : ");
-		for (Players p1 : player3) {
-			System.out.println(p1.getJn() + " :- " + p1.getName() + " :- " + p1.getCname());
-		}
+       
+        Set<Players> hashSet = new HashSet<>();
+        hashSet.addAll(miPlayers);
 
-		System.out.println("\nPlayer name start with: ");
-		for (Players p1 : player5) {
-			System.out.println(p1.getName() + " :- " + p1.getCname());
-		}
+        System.out.println("HashSet MI players: ");
+        for (Players p : hashSet) {
+            System.out.println(p.getName() + " : " + p.getCname());
+        }
 
-	}
+       
+        Set<Players> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.addAll(countryPlayers);
 
+        System.out.println("\nLinkedHashSet Country players : ");
+        for (Players p : linkedHashSet) {
+            System.out.println(p.getName() + " : " + p.getCname());
+        }
+        System.out.println("\nPlayers runs greater than 5000: ");
+       for(Players p:mostRuns) {
+    	   System.out.println(p.getName()+" : "+p.getTname()+" : "+p.getRuns());
+       }
+        
+    }
 }
