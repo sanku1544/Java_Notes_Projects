@@ -81,4 +81,62 @@ public class Example {
 			}
 		}
 	}
+	void m7() {
+		int []n={4,8,158,2,45,56,2};
+        int target=45;
+        for(int i=0;i<n.length;i++){
+            if(n[i]==target){
+               System.out.println("target is placed on: "+i+" : "+n[i]); 
+            }
+           
+        }
 	}
+	void m8() {
+		int []n={4,8,158,2,45,56,2};
+		int sum=0;
+		for(int i:n) {
+			sum=sum+i;
+		}
+		System.out.println("Sum of total elements: "+sum);
+	}
+	void m9() {
+		int []n={4,8,158,2,45,56,2};
+		int sum=0;
+		int avg=0;
+		for(int i:n) {
+			sum=sum+i;
+		}
+		
+		avg=sum/n.length;
+		System.out.println("Avarage of total elements: "+avg);
+	}
+	void m10() {
+		int []n={1,2,3,4,5,6,7,8,9};
+		int b=15;
+		for(int i=0;i<n.length;i++) {
+			for(int j=0;j<n.length;j++) {
+				if(n[i]+n[j]==b) {
+					System.out.println(n[i]+" + "+n[j]+" = "+b);
+				}
+			}
+		}
+		
+	}
+	void m11() {
+		int []n={1,2,3,4,5,6,7,8,9};
+		int even=0;
+		int odd=0;
+		for(int i=0;i<n.length;i++) {
+			if(n[i]%2==0) {
+				even++;
+			}else {
+				odd++;
+			}
+		}
+		System.out.println("Total even no.s: "+even);
+		System.out.println("Total odd no.s: "+odd);
+	}
+	void m12() {
+		
+	}
+}

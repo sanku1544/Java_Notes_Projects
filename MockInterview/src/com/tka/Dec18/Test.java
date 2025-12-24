@@ -7,10 +7,12 @@ public class Test {
 		c1.PalindromeString();
 		c1.countVC();
 		c1.Frequency();
+		c1.revArray();
+		c1.secdLargeElement();
 	}
 public static void  main(String []args) {
 	Coding  c1=new Coding();
-	c1.revArray();
+	c1.secdSmallElement();
 	
 }
 }

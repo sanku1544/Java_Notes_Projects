@@ -73,5 +73,41 @@ public class Coding {
 		}
 		
 	}
+	
+	void secdLargeElement() {
+		int []n= {55,78,14,84,36,54,05,45,06};
+		int max=0;
+		int secd=0;
+		for(int a:n) {
+			if(a>max) {
+				secd=max;
+				max=a;
+				
+				
+			}else  if(a>secd && a!=max){
+				secd=a;
+			}
+		}
+		System.out.println(max);
+		System.out.println(secd);
+	}
+	
+	void  secdSmallElement() {
+		int []n= {55,78,14,84,36,54,05,45,06};
+		int small=Integer.MAX_VALUE;
+		int secdSmall=Integer.MAX_VALUE;
+		for(int a:n) {
+			if(a<small) {
+				secdSmall=small;
+				small=a;
+				
+				
+			}else  if(a<secdSmall && a!=small){
+				secdSmall=a;
+			}
+		}
+		System.out.println(small);
+		System.out.println(secdSmall);
+	}
 
 }

@@ -32,7 +32,8 @@ public class MainClass {
 		    }
 		}
 		
-		
+		System.out.println(movies2025.containsKey("Simbh1"));
+		System.out.println(movies2025.containsValue(e1.movie()));
 		
 	}
 
