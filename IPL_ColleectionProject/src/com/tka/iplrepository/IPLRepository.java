@@ -9,9 +9,9 @@ public class IPLRepository {
 
 	List<Player> player=null;
 	public List<Player> getAllPlayer() {
-		System.out.println("Welcome to IPL Repositroy Module");
+		//System.out.println("Welcome to IPL Repositroy Module");
 		
-		player=new ArrayList();
+		player=new ArrayList<>();
 		player.add(new Player(1,45, "Rohit Sharma", 341, 2, "MI"));
 		player.add(new Player(2,12, "Tim David", 421, 3, "MI"));
 		player.add(new Player(3,5, "Tilak Varmaa", 541, 7, "MI"));

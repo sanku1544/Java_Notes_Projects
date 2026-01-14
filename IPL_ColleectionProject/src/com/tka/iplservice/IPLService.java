@@ -1,7 +1,7 @@
 package com.tka.iplservice;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.tka.entity.Player;
 import com.tka.iplrepository.IPLRepository;
@@ -11,7 +11,7 @@ public class IPLService {
 	IPLRepository iplrepository = null;
 
 	public List<Player> getAllPlayer() {
-		System.out.println("Welcome to IPL Service Module");
+		//System.out.println("Welcome to IPL Service Module");
 
 		iplrepository = new IPLRepository();
 		List<Player> allplayers = iplrepository.getAllPlayer();
@@ -20,77 +20,31 @@ public class IPLService {
 	}
 
 	public List<Player> getPlayerByTname(String tname) {
-		List<Player> playerbytname=new ArrayList();
-		
-		iplrepository = new IPLRepository();
-		List<Player> allplayers=this.getAllPlayer();
-		for(Player p:allplayers) {
-			if(p.getTname().equalsIgnoreCase(tname)) {
-			playerbytname.add(p);
-			}
-		}
-		
-		return playerbytname;
+		return this.getAllPlayer().stream().filter(m->m.getTname().equalsIgnoreCase(tname)).collect(Collectors.toList());
 	}
 
 	public List<Player> getByName(String name) {
-		List<Player> playerbyname=new ArrayList();
+		return this.getAllPlayer().stream().filter(m->m.getName().equalsIgnoreCase(name)).collect(Collectors.toList());
 		
-		iplrepository = new IPLRepository();
-		List<Player> allplayers=this.getAllPlayer();
-		for(Player p:allplayers) {
-			if(p.getName().equalsIgnoreCase(name)) {
-				playerbyname.add(p);
-			}
-		}
-		return playerbyname;
 	}
 
 	public List<Player> startWith(String n) {
-		List<Player> startwith=new ArrayList();
-		
-		iplrepository = new IPLRepository();
-		List<Player> allplayers=this.getAllPlayer();
-		for(Player p:allplayers) {
-			if(p.getName().startsWith(n)) {
-			startwith.add(p);
-			}
-		}
-		return startwith;
+		return this.getAllPlayer().stream().filter(m->m.getName().startsWith(n)).collect(Collectors.toList());
 	}
 
 	public int getHighestWicketTaker() {
-		
-		int mwk=0;
-		List<Player> allplayers=this.getAllPlayer();
-		for(Player p:allplayers) {
-			if(p.getWickets()>mwk) {
-				mwk=p.getWickets();			}
-		}
-		return mwk;
+	    return this.getAllPlayer().stream().map(Player::getWickets).reduce(0, Integer::max);
 	}
+         
 
 	public List<Player> AllRounders(int i, int j) {
-		List<Player> allrounder=new ArrayList();
-		
-		iplrepository=new IPLRepository();
-		List<Player> allplayers=this.getAllPlayer();
-		for(Player p:allplayers) {
-			if(p.getRuns()>i && p.getWickets()>j) {
-				allrounder.add(p);
-			}
-		}
-		return allrounder;
+		return this.getAllPlayer().stream().filter(m->m.getRuns()>i && m.getWickets()>j).collect(Collectors.toList());
 	}
 
 	public int getHighestRunner() {
-		int hrunner=0;
-		List<Player> allplayers=this.getAllPlayer();
-		for(Player p:allplayers) {
-			if(p.getRuns()>hrunner) {
-				hrunner=p.getRuns();			}
-		}
-		return hrunner;
+	    return this.getAllPlayer().stream().map(Player::getRuns).reduce(0, Integer::max);
+
+		
 	}
 
 }

@@ -1,9 +1,8 @@
 package com.tka.Practice;
 
-import java.io.FileNotFoundException;
+
 import java.io.FileReader;
 import java.io.FileWriter;
-import java.io.IOException;
 
 public class ReadDataPractice {
 	public static void main(String []args) {
