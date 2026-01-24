@@ -10,6 +10,7 @@ public class IPLUser {
 		System.out.println("Welcome to IPL User Module");
 		System.out.println("------------------All Players----------------------------");
 		IPLController controller = new IPLController();
+		controller.loadInitialData();
 		List<Player> allplayers = controller.getAllPlayers();
 		allplayers.forEach(n->System.out.println(n.getName()));
 		System.out.println("-----------------------By Team Name-----------------------");

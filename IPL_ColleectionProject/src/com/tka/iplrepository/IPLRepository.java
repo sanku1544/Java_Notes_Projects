@@ -1,5 +1,10 @@
 package com.tka.iplrepository;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,6 +13,70 @@ import com.tka.entity.Player;
 public class IPLRepository {
 
 	List<Player> player=null;
+	public IPLRepository() {
+
+	    String driver = "com.mysql.cj.jdbc.Driver";
+	    String url = "jdbc:mysql://localhost:3307/myntradb";
+	    String username = "root";
+	    String password = "2004";
+
+	    String createQuery =
+	            "CREATE TABLE IF NOT EXISTS IPL_Players (" +
+	            "P_no INT PRIMARY KEY AUTO_INCREMENT, " +
+	            "P_jn INT, " +
+	            "P_name VARCHAR(50) NOT NULL, " +
+	            "P_runs INT, " +
+	            "P_wickets INT, " +
+	            "P_tname VARCHAR(50)" +
+	            ")";
+
+	    try {
+	        Class.forName(driver);  
+
+	        Connection con = DriverManager.getConnection(url, username, password);
+	        Statement st = con.createStatement();
+
+	        st.executeUpdate(createQuery);
+
+	        System.out.println("Table created successfully!");
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	}
+	public void insertAllPlayers(List<Player> players) {
+		
+		    String url = "jdbc:mysql://localhost:3307/myntradb";
+		    String username = "root";
+		    String password = "2004";
+
+	    String insertQuery =
+	            "INSERT INTO IPL_Players (P_jn, P_name, P_runs, P_wickets, P_tname) " +
+	            "VALUES (?, ?, ?, ?, ?)";
+
+	    try {
+	        Connection con = DriverManager.getConnection(url, username, password);
+	        PreparedStatement ps = con.prepareStatement(insertQuery);
+
+	        for (Player p : players) {
+	            ps.setInt(1, p.getJn());
+	            ps.setString(2, p.getName());
+	            ps.setInt(3, p.getRuns());
+	            ps.setInt(4, p.getWickets());
+	            ps.setString(5, p.getTname());
+
+	            ps.addBatch();  
+	        }
+
+	        ps.executeBatch();  
+	        System.out.println("All Players Inserted Successfully!");
+
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+
 	public List<Player> getAllPlayer() {
 		//System.out.println("Welcome to IPL Repositroy Module");
 		

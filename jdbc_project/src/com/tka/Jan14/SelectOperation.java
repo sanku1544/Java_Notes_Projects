@@ -5,10 +5,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
-public class SelectStudent {
+public class SelectOperation {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		
 		
 		String driver="com.mysql.cj.jdbc.Driver";
 		String url="jdbc:mysql://localhost:3307/myntradb";
@@ -28,7 +31,8 @@ public class SelectStudent {
 		ResultSet rs = st.executeQuery(selectQuery);
 		System.out.println("Query Executed successfully ");
 		
-		System.out.println("\n"+"ID"+" "+"Name"+" "+"Age"+" "+"Dept"+" "+"Sal"+" "+"Date"+"\n");
+		List<Employee> emp=new ArrayList<>();
+		
 		while(rs.next()) {
 			int id=rs.getInt(1);
 			String name=rs.getString(2);
@@ -37,13 +41,27 @@ public class SelectStudent {
 			int sal=rs.getInt(5);
 			String date=rs.getString(6);
 			
-			System.out.println(id+" "+name+" "+age+" "+dept+" "+sal+" "+date);
+			Employee e1= new Employee(id,name,age,dept,sal,date);
+			
+			emp.add(e1);
+			
+			
+			
+//			System.out.println(id+" "+name+" "+age+" "+dept+" "+sal+" "+date);
+			
+		}
+		for(Employee e:emp) {
+			if(e.getE_name().startsWith("S")) {
+				System.out.println(e);
+			}
 			
 		}
 		
 		rs.close();
 		st.close();
 		conn.close();
+		
+		
 	}
 
 }

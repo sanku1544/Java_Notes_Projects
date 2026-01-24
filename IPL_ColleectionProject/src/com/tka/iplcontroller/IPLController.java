@@ -7,13 +7,19 @@ import com.tka.iplservice.IPLService;
 
 public class IPLController {
 
-	IPLService iplservice = null;
+	IPLService iplservice = new IPLService();
+	public void loadInitialData() {
+	    List<Player> list = iplservice.getAllPlayer();  // your existing method
+	    iplservice.insertInitialPlayers(list);
+	}
+
 
 	public List<Player> getAllPlayers() {
 		System.out.println("Welcome to IPL Controller Module");
 
-		iplservice = new IPLService();
+		
 		List<Player> allplayers = iplservice.getAllPlayer();
+		iplservice.insertInitialPlayers(allplayers);
 
 		return allplayers;
 	}

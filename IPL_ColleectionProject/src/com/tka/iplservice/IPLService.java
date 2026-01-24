@@ -8,12 +8,17 @@ import com.tka.iplrepository.IPLRepository;
 
 public class IPLService {
 	
-	IPLRepository iplrepository = null;
+	IPLRepository iplrepository = new IPLRepository();
+	
+	public void insertInitialPlayers(List<Player> list) {
+		iplrepository.insertAllPlayers(list);
+	}
+
 
 	public List<Player> getAllPlayer() {
 		//System.out.println("Welcome to IPL Service Module");
 
-		iplrepository = new IPLRepository();
+		
 		List<Player> allplayers = iplrepository.getAllPlayer();
 		
 		return allplayers;
